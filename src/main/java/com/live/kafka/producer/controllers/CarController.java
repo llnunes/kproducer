@@ -12,14 +12,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.live.kafka.producer.dtos.CarDTO;
-import com.live.kafka.producer.services.CarService;
+import com.live.kafka.producer.services.CarProducerService;
 
 @RestController
 @RequestMapping(value = "/cars")
 public class CarController {
 	
 	@Autowired
-	private CarService service;
+	private CarProducerService service;
 	
 	@PostMapping
 	public ResponseEntity<CarDTO> create(@RequestBody CarDTO carDTO) {

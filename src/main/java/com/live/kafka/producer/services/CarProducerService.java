@@ -10,9 +10,9 @@ import org.springframework.stereotype.Service;
 import com.live.kafka.producer.dtos.CarDTO;
 
 @Service
-public class CarService {
+public class CarProducerService {
 	
-	private static final Logger log = LoggerFactory.getLogger(CarService.class);
+	private static final Logger log = LoggerFactory.getLogger(CarProducerService.class);
 	
 	@Value("${topic.name}")
 	private String topic;
